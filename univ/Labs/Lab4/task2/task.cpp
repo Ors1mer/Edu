@@ -14,10 +14,12 @@ int main() {
     if (n <= 0) throw invalid_argument("Невірні дані! N має бути > 0!");
 
     cout << res;
+    long double element = 1.1;
     for (uint64_t i = 2; i <= n; i++) {
-        cout << showpos << sign*(1+0.1*i);
-        res += sign*(1 + 0.1*i);
-        sign *= -1;
+        element += 0.1;
+        cout << showpos << sign*element;
+        res += sign*element;
+        sign = -sign;
     }
 
     cout << "\nРезультат дорiвнює " << noshowpos << res << '\n';
