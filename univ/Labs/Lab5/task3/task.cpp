@@ -1,27 +1,26 @@
 #include <iostream>
 
-uint64_t* digitCountSum(uint64_t k) {
-    uint64_t C = 0, S = 0;
+void digitCountSum(uint64_t k, uint16_t &c, uint16_t &s) {
+    c = 0, s = 0;
     while (k) {
-        S += k%10;
-        C++;
+        c++;
+        s += k%10;
         k /= 10;
     }
-    static uint64_t arr[2] = {C, S};
-    return arr;
 }
 
 int main() {
     using namespace std;
     setlocale(LC_CTYPE, "UA");
-
+    
+    //getting numbers from stanrard input
     cout << "Введiть 5 чисел: ";
     uint64_t nums[5];
-    uint64_t* CS;
-    for (uint16_t i = 0; i <= 4; i++) cin >> nums[i];
+    for (short i = 0; i <= 4; i++) cin >> nums[i];
 
-    for (uint16_t i = 0; i <= 4; i++) {
-        CS = digitCountSum(nums[i]);
-        cout << "Кiлькicть цифр: " << CS[0] << ", сума цифр: " << CS[1] << '\n';
+    //getting answers c and s
+    uint16_t c, s;
+    for (short i = 0; i <= 4; i++) {
+        cout << << << ;
     }
 }
