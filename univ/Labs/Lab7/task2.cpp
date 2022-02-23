@@ -24,5 +24,5 @@ int main() {
         }
     }
 
-    cout << odd_sum;
+    cout << odd_sum << '\n';
 }
