@@ -1,4 +1,8 @@
-namespace class1 {
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace App {
     class Problem3n1 {
         private List<int> seq = new List<int>();
 
@@ -53,6 +57,30 @@ namespace class1 {
                 result.Add(nsolution);
             }
 
+            return result;
+        }
+
+        public Solution min_iterations(List<Solution> solutions) {
+            long min = Int32.MaxValue;
+            Solution result = new Solution();
+            foreach (Solution sol in solutions) {
+                if (sol.count < min) {
+                    min = sol.count;
+                    result = sol;
+                }
+            }
+            return result;
+        }
+
+        public Solution max_iterations(List<Solution> solutions) {
+            long max = 0;
+            Solution result = new Solution();
+            foreach (Solution sol in solutions) {
+                if (sol.count > max) {
+                    max = sol.count;
+                    result = sol;
+                }
+            }
             return result;
         }
     }
