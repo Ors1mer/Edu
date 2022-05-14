@@ -45,6 +45,7 @@ end;
 procedure print_message(x, y: integer; msg: string);
 begin
     clrscr;
+    TextColor(LightCyan);
     GotoXY(x, y);
     write(Msg);
     GotoXY(1, ScreenHeight);
@@ -61,11 +62,11 @@ begin
     Center_x := ScreenWidth div 2;
     Center_y := ScreenHeight div 2;
     clrscr;
-    { Print greeting }
+    { Print message }
     x := Center_x - (length(Msg) div 2);
     y := Center_y;
     print_message(x, y, Msg);
-    { Moving the greeting }
+    { Moving the message }
     repeat
         GetKey(key);
         move_coords(key, x, y, Msg);
