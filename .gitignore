@@ -1,5 +1,9 @@
-a.out
-
 *.doc
 *.docx
+
+*.out
+*.o
+
 *.jpg
+*.jpeg
+*.png
