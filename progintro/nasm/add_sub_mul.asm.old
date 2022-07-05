@@ -93,7 +93,7 @@ next:	inc ebx
 		PUTCHAR newln
 		cmp ebx, 1			; addition was done
 		je	subn
-		cmp ebx, 2			; substitution
+		cmp ebx, 2			; substitution, next multiplication
 		je	muln
 		jmp exit			; else finish the program
 
