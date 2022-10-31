@@ -1,18 +1,18 @@
 #include <iostream>
 
-long double circleS(long double r) {
+long double circle_area(long double r)
+{
     return 3.1415926*r*r;
 }
 
-int main() {
+int main()
+{
     using namespace std;
-    setlocale(LC_CTYPE, "UA");
-
     long double r1, r2, r3;
-    cout << "Введiть радiуси кругiв: ";
+    cout << "Enter the radiuses: ";
     cin >> r1 >> r2 >> r3;
 
-    cout << "Площi кругiв:\n" << "S1 = " << circleS(r1) << '\n';
-    cout << "S2 = " << circleS(r2) << '\n';
-    cout << "S3 = " << circleS(r3) << '\n'; 
+    cout << "Areas:\n" << "S1 = " << circle_area(r1) << '\n';
+    cout << "S2 = " << circle_area(r2) << '\n';
+    cout << "S3 = " << circle_area(r3) << '\n'; 
 }

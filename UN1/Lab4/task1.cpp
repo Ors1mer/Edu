@@ -1,22 +1,19 @@
 #include <iostream>
 
-int main() {
+int main()
+{
     using namespace std;
-    setlocale(LC_CTYPE, "UA");
-    
     int64_t a, b, k, S = 0;
 
-    cout << "Введiть числа А та В (А < В) та дiльник K: ";
+    cout << "Enter А & В (А < В) and the denominator K: ";
     cin >> a >> b >> k;
-    
-    if (a >= b) {
-        throw std::invalid_argument("Невірні дані! A має бути < B!");
+    if(a >= b) {
+        throw std::invalid_argument("A must be less than B!");
     }
 
-    for (int64_t i = a; i <= b; i++) {
-        cout << "Для i = " << i << ": " << i%k << '\n';
+    for(int64_t i = a; i <= b; i++) {
+        cout << "For i = " << i << ": " << i%k << '\n';
         S += i%k;
     }
-
-    cout << "Сума остач вiд дiлення: " << S << '\n';
+    cout << "The sum of the remainders: " << S << '\n';
 }

@@ -1,9 +1,10 @@
 #include <iostream>
 
 //reference solution
-void digitCountSum(uint64_t k, uint16_t &c, uint16_t &s) {
+void digitCountSum(uint64_t k, uint16_t &c, uint16_t &s)
+{
     c = 0, s = 0;
-    while (k) {
+    while(k) {
         c++;
         s += k%10;
         k /= 10;
@@ -11,9 +12,10 @@ void digitCountSum(uint64_t k, uint16_t &c, uint16_t &s) {
 }
 
 //pointers solution
-void digitCountSum(uint64_t k, uint16_t* c, uint16_t* s) {
+void digitCountSum(uint64_t k, uint16_t* c, uint16_t* s)
+{
     *c = 0, *s = 0;
-    while (k) {
+    while(k) {
         (*c)++;
         *s += k%10;
         k /= 10;
@@ -21,15 +23,12 @@ void digitCountSum(uint64_t k, uint16_t* c, uint16_t* s) {
 }
 
 
-int main() {
+int main()
+{
     using namespace std;
-    setlocale(LC_CTYPE, "UA");
-    
-    //getting numbers from stanrard input
-    cout << "Введiть 5 чисел: ";
+    cout << "Enter 5 numbers: ";
     uint64_t nums[5];
     for (short i = 0; i <= 4; i++) cin >> nums[i];
-
     //getting answers c and s for every num from nums
     //using two distinct functions
     uint16_t c, s;

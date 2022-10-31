@@ -1,12 +1,9 @@
 #include <iostream>
 
-
-int main() {
+int main()
+{
     using namespace std;
-    // input values
-    double a, b, c;
-    // additional variable
-    double t;
+    double a, b, c, t;
 
     cout << "Введіть a, b, c: ";
     cin >> a >> b >> c;

@@ -1,13 +1,12 @@
 #include <iostream>
 #include <cmath>
 
-
-int main() {
+int main()
+{
     using namespace std;
-    // input values
     double x, y;
-    // output value
     bool ans;
+
     cout << "Enter the 2D coordinates:\n";
     cin >> x >> y;
 
@@ -18,5 +17,4 @@ int main() {
         ans = false;
     
     cout << "Is point's location in the area? " << boolalpha << ans << '\n';
-
 }
