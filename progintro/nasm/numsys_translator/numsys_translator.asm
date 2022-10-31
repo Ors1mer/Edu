@@ -48,13 +48,14 @@ again:	cmp		byte [esi+1], 0
 		mov		esi, [ebp+8]	; store the address of numsys
 		xor		ebx, ebx
 		mov		bl, [esi]		; store the numsys in ebx
+
 		push	ebx				; push number system
 
 		push	dword [ebp+16]	; push given number addr for strlen
 		call	strlen			; calculate length
 		add		esp, 4
-		push	eax				; push the length
 
+		push	eax				; push the length
 		push	dword [ebp+16]	; push given number addr for str_to_int
 		mov		esi, [ebp+16]
 		mov		bl, [esi]

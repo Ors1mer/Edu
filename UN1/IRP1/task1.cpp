@@ -4,17 +4,20 @@
 #include <iomanip>
 
 // the studied function
-long double func(long double x) {
+long double func(long double x)
+{
     return (exp(-x) + 1);
 }
 
 // calculate exact result via Newton-Leibniz formula
-long double Newton_Leibniz(long double a, long double b) {
+long double Newton_Leibniz(long double a, long double b)
+{
     return ( (-exp(-b) + b) - (-exp(-a) + a) );
 }
 
 // calculate result via midpoint rectangles method
-long double rectangles_method(uint16_t n, long double a, long double b) {
+long double rectangles_method(uint16_t n, long double a, long double b)
+{
     long double result = 0;
     long double delta = (b-a)/n;
 
@@ -26,33 +29,29 @@ long double rectangles_method(uint16_t n, long double a, long double b) {
     return result;
 }
 
-int main() {
+int main()
+{
     using namespace std;
-    setlocale(LC_CTYPE, "UA");
-
     // arguments of the function, the range of calculation
     long double a, b;
     ifstream fin("input1.in");
-    if (!fin) cerr << "Файл порожній або не існує";
+    if (!fin) cerr << "File's empty or doesn't exist!\n";
     fin >> a >> b;
     // variables to save calculated function values
     long double rm;
     long double nl = Newton_Leibniz(a, b);
-
     //define the output file
     ofstream fout("out1.txt");
-
     //make cout/fout always print 8 digits after point
     cout.setf(ios::fixed);
     cout.precision(8);
     fout.setf(ios::fixed);
     fout.precision(8);
 
-
-    cout << "Підінтегральна функція y = e^-x + 1\nПроміжок ["<<a<<", "<<b<< "]\n"
-         << "Точне значення інтегралу на проміжку: " << nl << '\n';
-    fout << "Підінтегральна функція y = e^-x + 1\nПроміжок ["<<a<<", "<<b<< "]\n"
-         << "Точне значення інтегралу на проміжку: " << nl << '\n';
+    cout << "The integrand y = e^-x + 1\nThe interval ["<<a<<", "<<b<< "]\n"
+         << "The exact value of the integral: " << nl << '\n';
+    fout << "The integrand y = e^-x + 1\nThe interval ["<<a<<", "<<b<< "]\n"
+         << "The exact value of the integral: " << nl << '\n';
 
     for (uint16_t n = 10; n <= 100; n += 5) {
         rm = rectangles_method(n, a, b);
