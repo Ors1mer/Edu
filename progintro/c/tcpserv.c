@@ -48,15 +48,6 @@ enum {
     senderr
 };
 
-
-int string_len(const char *str)
-{
-    const char *p;
-    for(p = str; *p; p++)
-        {}
-    return p - str;
-}
-
 void strncopy(char *dest, const char *src, int n)
 {
     const char *srcend = src + n;
