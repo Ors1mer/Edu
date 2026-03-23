@@ -3,10 +3,8 @@
 int main() {
     using std::cout, std::cin;
 
-    const size_t M = 3, N = 4;
-    int64_t K[M][N] = {{-24, 18, 5, 21}, 
-                       {-15, -4, -5, 1}, 
-                       {48, -64, 33, 12}};
+    const size_t M = 1, N = 1;
+    int64_t K[M][N] = {{-24}}; 
 
     // Smallest in row
     cout << "Smallest in row: \t";
@@ -33,5 +31,5 @@ int main() {
         }
         cout << biggest << '\t';
     }
-
+    cout << '\n';
 }
