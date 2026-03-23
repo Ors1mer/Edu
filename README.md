@@ -1,6 +1,12 @@
-# Edu
-Educational repository
+# Educational repository
 
-I will store here all my laboratory works given to me by the university, so it's easier to control and share it.
+No practical use.\
+Just some simple programs written in C++ and other languages.
 
-No practical use; just some simple scripts written in C++.
+# Languages used
+
+- **C++**
+- **NASM**
+- **Pascal**
+- **PHP** *(I regret it)*
+- **C#** *(I do drastically regret about it)*
