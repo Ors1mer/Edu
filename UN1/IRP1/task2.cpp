@@ -11,7 +11,7 @@ int main() {
     long double a, b, integral = 0;
     long double x1, x2, y1, y2;
 
-    ifstream input("input.in");
+    ifstream input("input2.in");
     if (!input) cerr << "Файлу не існує!"; //foolproof
     input >> x1 >> y1;
     a = x1; //the starting point of the integral
@@ -27,7 +27,7 @@ int main() {
     } while (!input.eof());
 
     //create the output file
-    ofstream output("outKaunin.txt");
+    ofstream output("out2.txt");
     //make cout/output always print 8 digits after the point
     cout.setf(ios::fixed);
     cout.precision(8);

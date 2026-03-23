@@ -32,7 +32,7 @@ int main() {
 
     // arguments of the function, the range of calculation
     long double a, b;
-    ifstream fin("input.in");
+    ifstream fin("input1.in");
     if (!fin) cerr << "Файл порожній або не існує";
     fin >> a >> b;
     // variables to save calculated function values
@@ -40,7 +40,7 @@ int main() {
     long double nl = Newton_Leibniz(a, b);
 
     //define the output file
-    ofstream fout("outKaunin.txt");
+    ofstream fout("out1.txt");
 
     //make cout/fout always print 8 digits after point
     cout.setf(ios::fixed);
