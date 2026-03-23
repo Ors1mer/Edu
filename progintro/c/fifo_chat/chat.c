@@ -1,6 +1,7 @@
 /* chat.c
- *
- *
+ * Launch in two terminals like './chat f1 f2' and './chat f2 f1',
+ * where f1 & f2 - named pipes.
+ * Write text in any, press enter and see what happens.
  */
 #include <sys/select.h>
 #include <stdlib.h>
