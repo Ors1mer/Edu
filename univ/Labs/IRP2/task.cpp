@@ -67,8 +67,9 @@ void tabula(long double a, long double b, int n, long double (*func)(long double
 int main() {
     using namespace std;
     setlocale(LC_CTYPE, "UA");
-    
-    tabula(-1, 1, 20, cos);
+
+    full_tabula(-1, 1, 20);
+    tabula(-1, 1, 20, recur_cos);
 
     return 0;
 }
