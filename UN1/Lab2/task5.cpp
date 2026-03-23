@@ -1,15 +1,14 @@
 #include <iostream>
 
-
-int main() {
+int main()
+{
     using namespace std;
-    // input & output values
     unsigned short d, m;
 
     cout << "Enter the month and the day: ";
     cin >> d >> m;
 
-    if (d == 1) {
+    if(d == 1) {
         --m;
         switch (m) {
             case 1: case 2: case 4: case 6: case 8: case 9: case 11:
@@ -21,8 +20,10 @@ int main() {
             case 3:
                 d = 28;
                 break;
-        }}
-    else --d;
+        }
+    } else {
+        --d;
+    }
 
     cout << "The previous date is: " << d << '.' << m << '\n';
 }

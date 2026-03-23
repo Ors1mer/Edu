@@ -1,20 +1,16 @@
 #include <iostream>
 #include <cmath>
 
-
-int main() {
+int main()
+{
     using namespace std;
-    // input values
-    double n, x;
-    // output value
-    double y;
+    double n, x, y;
 
     cout << "Enter n: ";
     cin >> n;
     cout << "Enter x: ";
     cin >> x;
-    
-    // calculating in two ways depending on input
+    // Calculating in two ways depending on input
     if ((n != 0 && x >= 0) && (n > 0 && n != 1))
         y = log(x) / log(n); // logarithm with custom base
     else

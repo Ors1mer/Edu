@@ -1,18 +1,14 @@
 #include <iostream>
 #include <cmath>
 
-
-int main() {
+int main()
+{
     using namespace std;
-    // input variables
     int n;
-    double x;
-    // output variables
-    double r, d, l, s;
+    double r, d, l, s, x;
     
     cout << "Enter the number and the value: ";
     cin >> n >> x;
-
     switch (n) {
         case 1:
             r = x;
@@ -40,7 +36,6 @@ int main() {
             l = M_PI*d;
             break;
     }
-    
     cout << "R = " << r << '\n';
     cout << "D = " << d << '\n';
     cout << "L = " << l << '\n';
