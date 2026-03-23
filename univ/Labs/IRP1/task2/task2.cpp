@@ -7,35 +7,25 @@ int main() {
     using namespace std;
     setlocale(LC_CTYPE, "UA");
     
-    long double integral_value = 0;
-    int64_t lines = -1;
+    long double integral = 0, a, b;
+    long double x1, y1, x2, y2;
 
-    //get the amount of lines in the file
+    //open input file
     ifstream input("input.in");
-    if (!input) cerr << "Файлу не існує!";
-    string s;
-    while (!input.eof()) {
-        getline(input, s);
-        lines++;
-    }
-    input.clear();
-    input.seekg(0, ios::beg);
+    //initial reading is needed to define a
+    input >> x1 >> y1 >> x2 >> y2;
+    a = x1;
     
-    //array, which shall store all point values from the file
-    long double points[lines][2];
-    for (int l = 0; l < lines; l++) {
-        input >> points[l][0] >> points[l][1];
-    }
+    //calculating integral
+    do {
+        integral += (x2-x1)*(y1+y2)/2;
 
+        x1 = x2; y1 = y2;
+        input >> x2 >> y2;
+        b = x2;
 
-    //calculation of the integral
-    long double x, y;
-    for (int i = 0; i < lines-1; i++) {
-        x = points[i+1][0] - points[i][0];
-        y = (points[i][1] + points[i+1][1])/2;
-        integral_value += x*y;
-    }
-   
+    } while (!input.eof());
+
     //create the output file
     ofstream output("outKaunin.txt");
     //make cout/output always print 8 digits after the point
@@ -44,10 +34,8 @@ int main() {
     output.setf(ios::fixed);
     output.precision(8);
 
-    cout << "Інтервал інтегрування: ["  << points[0][0]  << "; " << points[lines-1][0] << "]\n";
-    cout << "Значення інтегралу: " << integral_value;
-    output << "Інтервал інтегрування: ["  << points[0][0]  << "; " << points[lines-1][0] << "]\n";
-    output << "Значення інтегралу: " << integral_value;
-
-    input.close(); output.close();
+    cout << "Інтервал інтегрування: ["  << a << "; " << b << "]\n";
+    cout << "Значення інтегралу: " << integral;
+    output << "Інтервал інтегрування: [" << a  << "; " << b << "]\n";
+    output << "Значення інтегралу: " << integral;
 }
