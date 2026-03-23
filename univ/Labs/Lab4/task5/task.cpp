@@ -15,21 +15,14 @@ int main() {
     //foolproof
     if (n <= 1) throw invalid_argument("Невірні дані! N має бути > 1!");
     
+    cout << a1 << ", " << a2;
+    if (n >= 3) cout << ", ";
+
     //calculating
-    for (uint64_t i = 1; i <= n; i++) {
-        if (i == 1) {
-            cout << a1;
-
-        } else if (i == 2) {
-            cout << a2;
-
-        } else {
-            ak = (a1 + 2*a2)/3;
-            cout << ak;
-            a1 = a2; a2 = ak;
-
-        }
-
+    for (uint64_t i = 3; i <= n; i++) {
+        ak = (a1 + 2*a2)/3;
+        cout << ak;
+        a1 = a2; a2 = ak;
         if (i != n) cout << ", ";
     }
     cout << '\n';

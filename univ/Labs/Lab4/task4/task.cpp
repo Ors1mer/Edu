@@ -22,7 +22,7 @@ int main() {
     for (uint64_t i = 1; i <= n; i++) {
         sum += sign*x_to_pow/i;
 
-        x_to_pow *= x; sign *= -1;
+        x_to_pow *= x; sign = -sign;
     }
 
     cout << "Результат дорiвнює " << sum << '\n';
